@@ -26,7 +26,12 @@ class Teams(object):
                                    self.sortedpersonlist.pop()[0],
                                    self.sortedpersonlist.pop()[0]]
                                   )
-        Teams.teamlist.append(self.sortedpersonlist)  # todo needs to be fixed
+
+        i = 0
+        while self.sortedpersonlist:
+            Teams.teamlist[i].append(self.sortedpersonlist.pop(0)[0])
+            i += 1
+
         for team in Teams.teamlist:
             print(team)
 
